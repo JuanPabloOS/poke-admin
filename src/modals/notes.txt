@@ -1,0 +1,161 @@
+{/* <Form.Label>Name:</Form.Label>
+                  <Form.Control
+                    size="sm"
+                    type="text"
+                    id="name"
+                    name="name"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    placeholder="Name"
+                    value={formik.values.name}
+                  /> */}
+<Form.Group>
+              <Form.Label>Height:</Form.Label>
+              <Form.Control
+                size="sm"
+                type="number"
+                id="height"
+                name="height"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                placeholder={initialValues.height}
+                value={formik.values.height}
+              />
+              <Form.Text>Don't use decimals it'll be formatted</Form.Text>
+              {/* <ErrorMessage name="height" /> */}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Weight:</Form.Label>
+              <Form.Control
+                size="sm"
+                type="number"
+                id="weight"
+                name="weight"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                placeholder={initialValues.weight}
+                value={formik.values.weight}
+              />
+              <Form.Text>Don't use decimals it'l be formatted</Form.Text>
+              {/* <ErrorMessage name="weight" /> */}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>1st type</Form.Label>
+              <Form.Control
+                size="sm"
+                as="select"
+                id="fstType"
+                name="fstType"
+                value={formik.values.fstType}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                custom
+              >
+                {types.map((t, i) => (
+                  <option key={`type-first-option-${t}-${i}`}>{t}</option>
+                ))}
+              </Form.Control>
+              {/* <ErrorMessage name="fstType" /> */}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>2nd type</Form.Label>
+              <Form.Control
+                size="sm"
+                as="select"
+                id="sndType"
+                name="sndType"
+                value={formik.values.sndType}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                custom
+              >
+                <option value="">----</option>
+                {types.map((t, i) => (
+                  <option key={`type-second-option-${t}-${i}`}>{t}</option>
+                ))}
+              </Form.Control>
+
+              <Form.Text>This is optional</Form.Text>
+              {/* <ErrorMessage name="sndType" /> */}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Hp</Form.Label>
+              <Form.Control
+                size="sm"
+                type="number"
+                id="hp"
+                name="hp"
+                placeholder={initialValues.hp}
+                value={formik.values.hp}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              {/* <ErrorMessage name="hp" /> */}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Attack</Form.Label>
+              <Form.Control
+                size="sm"
+                type="number"
+                id="attack"
+                name="attack"
+                placeholder={initialValues.attack}
+                value={formik.values.attack}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              {/* <ErrorMessage name="attack" /> */}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Defense</Form.Label>
+              <Form.Control
+                size="sm"
+                type="number"
+                id="defense"
+                name="defense"
+                placeholder={initialValues.defense}
+                value={formik.values.defense}
+                onChange={formik.handleChange}
+              />
+              {/* <ErrorMessage name="defense" /> */}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Special attack:</Form.Label>
+              <Form.Control
+                size="sm"
+                type="number"
+                id="spAttack"
+                name="spAttack"
+                placeholder={initialValues.spAttack}
+                value={formik.values.spAttack}
+                onChange={formik.handleChange}
+              />
+              {/* <ErrorMessage name="spAttack" /> */}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Special defense:</Form.Label>
+              <Form.Control
+                size="sm"
+                type="number"
+                id="spDefense"
+                name="spDefense"
+                placeholder={initialValues.spDefense}
+                value={formik.values.spDefense}
+                onChange={formik.handleChange}
+              />
+              {/* <ErrorMessage name="spDefense" /> */}
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Special defense:</Form.Label>
+              <Form.Control
+                size="sm"
+                type="number"
+                id="speed"
+                name="speed"
+                placeholder={initialValues.speed}
+                value={formik.values.speed}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              {/* <ErrorMessage name="speed" /> */}
+            </Form.Group>

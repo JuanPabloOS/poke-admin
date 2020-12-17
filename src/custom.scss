@@ -1,0 +1,80 @@
+$primary: #af4d98 !default;
+$secondary: #3185fc !default;
+$gray: #eaeaea !default;
+$light: #f5f5f5 !default;
+$dark: #2e3532 !default;
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Poppins, BlinkMacSystemFont, Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+.bg-gray {
+  background-color: $gray;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.side-panel {
+  width: 340px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.st-1 {
+  font-size: 73.24px;
+}
+.st-2 {
+  font-size: 58.59px;
+}
+.st-3 {
+  font-size: 46.88px;
+}
+.st-4 {
+  font-size: 37.5px;
+}
+.st-5 {
+  font-size: 30px;
+}
+.st-6 {
+  font-size: 24px;
+}
+.st-7 {
+  font-size: 19.2px;
+}
+.st-8 {
+  font-size: 15.36px;
+}
+.st-9 {
+  font-size: 12.29px;
+}
+
+.customSearchInput {
+  border-radius: 20px;
+  border: 1px solid #c2c2c2;
+  height: 38px;
+  background-color: $light;
+  font-style: italic;
+  color: $primary;
+  outline: none;
+  padding-left: 15px;
+}
+
+// .card{
+//   border-bottom-width: 1px;
+
+// }
+.color-light {
+  color: $light !important;
+}
