@@ -8,22 +8,6 @@ const ItemsProvider = ({ children }) => {
   const [activeItemId, setActiveItemId] = useState(1);
   const [activeItem, setActiveItem] = useState(null);
 
-  function nextItem() {
-    setActiveItemId((currentId) => {
-      if (currentId + 1 > items.length) {
-        return 1;
-      }
-      return currentId + 1;
-    });
-  }
-  function prevItem() {
-    setActiveItemId((currentId) => {
-      if (currentId - 1 < 1) {
-        return items.length;
-      }
-      return currentId - 1;
-    });
-  }
   function changeActiveItemId(id) {
     setActiveItemId(id);
   }
@@ -35,8 +19,6 @@ const ItemsProvider = ({ children }) => {
     <ItemsContext.Provider
       value={{
         items,
-        nextItem,
-        prevItem,
         changeActiveItemId,
         activeItem,
         activeItemId,
