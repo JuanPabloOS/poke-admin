@@ -18,8 +18,9 @@ export const types = [
   'steel',
   'fairy',
 ];
-export const DAMAGE_TYPES = {
-  bug: {
+export const DAMAGE_TYPES = [
+  {
+    type: 'bug',
     doubleDamageFrom: ['flying', 'rock', 'fire'],
     doubleDamageTo: ['grass', 'psychic', 'dark'],
     halfDamageFrom: ['fighting', 'ground', 'gras'],
@@ -33,27 +34,32 @@ export const DAMAGE_TYPES = {
       'fairy',
     ],
   },
-  dragon: {
+  {
+    type: 'dragon',
     doubleDamageFrom: ['ice', 'dragon', 'fairy'],
     doubleDamageTo: ['dragon'],
     halfDamageFrom: ['fire', 'water', 'grass', 'electric'],
     halfDamageTo: ['steel'],
     noDamageTo: ['fairy'],
   },
-  fairy: {
+  {
+    type: 'fairy',
+
     doubleDamageFrom: ['poison', 'steel'],
     doubleDamageTo: ['fighting', 'dragon', 'dark'],
     halfDamageFrom: ['fighting', 'bug', 'dark'],
     halfDamageTo: ['poison', 'steel', 'fire'],
     noDamageFrom: ['dragon'],
   },
-  fire: {
+  {
+    type: 'fire',
     doubleDamageFrom: ['ground', 'rock', 'water'],
     doubleDamageTo: ['bug', 'steel', 'grass', 'ice'],
     halfDamageFrom: ['bug', 'steel', 'fire', 'grass', 'ice', 'fairy'],
     halfDamageTo: ['rock', 'fire', 'water', 'dragon'],
   },
-  ghost: {
+  {
+    type: 'ghost',
     doubleDamageFrom: ['ghost', 'dark'],
     doubleDamageTo: ['ghost', 'psychic'],
     halfDamageFrom: ['poison', 'bug'],
@@ -61,27 +67,31 @@ export const DAMAGE_TYPES = {
     noDamageFrom: ['normal', 'fighting'],
     noDamageTo: ['normal'],
   },
-  ground: {
+  {
+    type: 'ground',
     doubleDamageFrom: ['water', 'grass', 'ice'],
     doubleDamageTo: ['poison', 'rock', 'steel', 'fire', 'electric'],
     halfDamageFrom: ['poison', 'rock'],
     halfDamageTo: ['bug', 'grass', 'electric'],
     noDamageTo: ['flying'],
   },
-  normal: {
+  {
+    type: 'normal',
     doubleDamageFrom: ['fighting'],
     halfDamageTo: ['rock', 'steel'],
     noDamageFrom: ['ghost'],
     noDamageTo: ['ghost'],
   },
-  psychic: {
+  {
+    type: 'psychic',
     doubleDamageFrom: ['bug', 'ghost', 'dark'],
     doubleDamageTo: ['fighting', 'poison'],
     halfDamageFrom: ['fighting', 'psychic'],
     halfDamageTo: ['steel', 'psychic'],
     noDamageTo: ['dark'],
   },
-  steel: {
+  {
+    type: 'steel',
     doubleDamageFrom: ['fighting', 'ground', 'fire'],
     doubleDamageTo: ['rock', 'ice', 'fairy'],
     halfDamageFrom: [
@@ -99,34 +109,39 @@ export const DAMAGE_TYPES = {
     halfDamageTo: ['steel', 'fire', 'water', 'electric'],
     noDamageFrom: ['poison'],
   },
-  dark: {
+  {
+    type: 'dark',
     doubleDamageFrom: ['fighting', 'bug', 'fairy'],
     doubleDamageTo: ['ghost', 'dark'],
     halfDamageFrom: ['ghost', 'dark'],
     halfDamageTo: ['fighting', 'dark', 'fairy'],
     noDamageFrom: ['psychic'],
   },
-  electric: {
+  {
+    type: 'electric',
     doubleDamageFrom: ['ground'],
     doubleDamageTo: ['flying', 'water'],
     halfDamageFrom: ['flying', 'steel', 'electric'],
     halfDamageTo: ['grass', 'electric', 'dragon'],
     noDamageTo: ['ground'],
   },
-  fighting: {
+  {
+    type: 'fighting',
     doubleDamageFrom: ['flying', 'psychic', 'fairy'],
     doubleDamageTo: ['normal', 'rock', 'steel', 'ice', 'dark'],
     halfDamageFrom: ['flying', 'poison', 'bug', 'psychic', 'fairy'],
     noDamageTo: ['ghost'],
   },
-  flying: {
+  {
+    type: 'flying',
     doubleDamageFrom: ['rock', 'electric', 'ice'],
     doubleDamageTo: ['fighting', 'bug', 'grass'],
     halfDamageFrom: ['fighting', 'bug', 'grass'],
     halfDamageTo: ['rock', 'steel', 'electric'],
     noDamageFrom: ['ground'],
   },
-  grass: {
+  {
+    type: 'grass',
     doubleDamageFrom: ['flying', 'poison', 'bug', 'fire', 'ice'],
     doubleDamageTo: ['ground', 'rock', 'water'],
     halfDamageFrom: ['ground', 'water', 'grass', 'electric'],
@@ -140,29 +155,33 @@ export const DAMAGE_TYPES = {
       'dragon',
     ],
   },
-  ice: {
+  {
+    type: 'ice',
     doubleDamageFrom: ['fighting', 'rock', 'steel', 'fire'],
     doubleDamageTo: ['flying', 'ground', 'grass', 'dragon'],
     halfDamageFrom: ['ice'],
     halfDamageTo: ['steel', 'fire', 'water', 'ice'],
   },
-  poison: {
+  {
+    type: 'poison',
     doubleDamageFrom: ['ground', 'psychic'],
     doubleDamageTo: ['grass', 'fairy'],
     halfDamageFrom: ['fighting', 'poison', 'bug', 'grass', 'fairy'],
     halfDamageTo: ['poison', 'ground', 'rock', 'ghost'],
     noDamageTo: ['steel'],
   },
-  rock: {
+  {
+    type: 'rock',
     doubleDamageFrom: ['fighting', 'ground', 'steel', 'water', 'grass'],
     doubleDamageTo: ['flying', 'bug', 'fire', 'ice'],
     halfDamageFrom: ['normal', 'flying', 'poison', 'fire'],
     halfDamageTo: ['fighting', 'ground', 'steel'],
   },
-  water: {
+  {
+    type: 'water',
     doubleDamageFrom: ['grass', 'electric'],
     doubleDamageTo: ['ground', 'rock', 'fire'],
     halfDamageFrom: ['steel', 'fire', 'water', 'ice'],
     halfDamageTo: ['water', 'grass', 'dragon'],
   },
-};
+];

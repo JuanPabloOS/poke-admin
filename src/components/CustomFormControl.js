@@ -9,7 +9,7 @@ const TextError = styled.div`
   color: #dc3545;
 `;
 const CustomFormControl = ({ label, ...props }) => {
-  const [field, meta, helpers] = useField(props);
+  const [field, meta] = useField(props);
   return (
     <Form.Group>
       <Form.Label>{label}</Form.Label>
@@ -34,7 +34,7 @@ const CustomFormControl = ({ label, ...props }) => {
 export default CustomFormControl;
 
 export const CustomSelectControl = ({ label, children, ...props }) => {
-  const [field, meta, helpers] = useField(props);
+  const [field, meta] = useField(props);
   return (
     <Form.Group>
       <Form.Label>{label}</Form.Label>

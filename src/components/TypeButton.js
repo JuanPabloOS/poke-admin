@@ -7,8 +7,9 @@ const StyledButton = styled.button`
   display: inline-block;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  background: none !important;
+  background: ${(props) => props.color};
   border-radius: 20px;
+  border: none;
   height: 40px;
   justify-content: center;
   padding: 0.3rem;
@@ -26,14 +27,14 @@ const StyledButton = styled.button`
   }
 `;
 const TypeButton = ({ type, ...rest }) => {
-  let color = 'none';
+  let color = 'rgba(255,255,255,0.7)';
   if (types.includes(type)) {
     color = pokemonColors[type];
   }
 
   return (
     <StyledButton color={color} {...rest}>
-      type
+      {type !== '' ? type : 'Select a type'}
     </StyledButton>
   );
 };

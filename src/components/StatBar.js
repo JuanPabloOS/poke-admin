@@ -29,7 +29,7 @@ const StatContainer = styled.div`
 
 const StatBar = ({ label, stat, color = 'green' }) => {
   if (stat === undefined) {
-    throw 'stat is not defined';
+    throw Error('stat is not defined');
   }
   let percentage = (stat * 100) / 255;
   return (

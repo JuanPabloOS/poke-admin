@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Navbar, Nav, Form } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
-  Redirect,
   Switch,
   Route,
   NavLink,
@@ -30,7 +29,7 @@ const StyledNavbarBrand = styled.span`
   line-height: inherit;
   white-space: nowrap;
 `;
-const SwitchButton = styled.button``;
+
 const AppRouter = () => {
   const { darkMode, changeMode } = useContext(ThemeModeContext);
   return (

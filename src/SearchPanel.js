@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import PokemonCard from './components/PokemonCard';
 import styled from 'styled-components';
 import { PokemonContext } from './context/PokemonProvider';
 import SideContainer from './components/SideContainer';
+import { types } from './data/types';
 
 const TopSide = styled.div`
   height: 150px;
@@ -21,6 +22,53 @@ const MiddleSide = styled.div`
 
 const SearchPanel = () => {
   const { pokemons } = useContext(PokemonContext);
+  const [searchText, setSearchText] = useState('');
+
+  function typesContainsType(types, type) {
+    for (let i = 0; i < types.length; i++) {
+      if (types[i].name === type) {
+        return true;
+      }
+    }
+    return false;
+  }
+  function renderPokemonList() {
+    if (searchText.startsWith(':')) {
+      let type = searchText.split(':')[1];
+
+      return pokemons
+        .filter((pokemon) => typesContainsType(pokemon.types, type))
+        .map((p) => (
+          <PokemonCard
+            id={p.id}
+            name={p.name}
+            types={p.types}
+            key={`pokemon-element-#00-${p.id}`}
+          />
+        ));
+    }
+    if (searchText !== '') {
+      return pokemons
+        .filter((p) => p.name.startsWith(searchText))
+        .map((p) => (
+          <PokemonCard
+            id={p.id}
+            name={p.name}
+            types={p.types}
+            key={`pokemon-element-#00-${p.id}`}
+          />
+        ));
+    }
+    return pokemons.map((p) => (
+      <PokemonCard
+        id={p.id}
+        name={p.name}
+        types={p.types}
+        key={`pokemon-element-#00-${p.id}`}
+      />
+    ));
+  }
+
   return (
     <SideContainer>
       <TopSide>
@@ -32,19 +80,12 @@ const SearchPanel = () => {
             type="text"
             placeholder="Search"
             className="customSearchInput"
+            value={searchText}
+            onChange={({ target }) => setSearchText(target.value)}
           />
         </div>
       </TopSide>
-      <MiddleSide>
-        {pokemons.map((p) => (
-          <PokemonCard
-            id={p.id}
-            name={p.name}
-            types={p.types}
-            key={`pokemon-element-#00-${p.id}`}
-          />
-        ))}
-      </MiddleSide>
+      <MiddleSide>{renderPokemonList()}</MiddleSide>
     </SideContainer>
   );
 };
