@@ -7,6 +7,7 @@ const ItemInfo = () => {
   const { activeItem, activeItemId } = useContext(ItemsContext);
   const [itemInfo, setItemInfo] = useState(null);
   useEffect(() => {
+    setItemInfo(null);
     fetch(`https://pokeapi.co/api/v2/item/${activeItemId}/`)
       .then((res) => res.json())
       .then((data) => {
@@ -28,24 +29,28 @@ const ItemInfo = () => {
           <img src={activeItem.imgUrl} alt="" width={200} height={200} />
         </Row>
       )}
-      {itemInfo !== null && (
-        <Row>
-          <Col className="d-flex flex-column px-4">
-            <TextSpan>
-              <b>Description</b>: {itemInfo.description}
-            </TextSpan>
-            <TextSpan>
-              <b>Category</b>: {itemInfo.category}
-            </TextSpan>
-            <TextSpan>
-              <b>Effects:</b>
-            </TextSpan>
-            {itemInfo.effect_entries.map((ef) => (
-              <TextSpan>{ef.effect}</TextSpan>
-            ))}
-          </Col>
-        </Row>
-      )}
+      <Row>
+        <Col className="d-flex flex-column px-4">
+          {itemInfo === null ? (
+            <TextSpan>Loading...</TextSpan>
+          ) : (
+            <>
+              <TextSpan>
+                <b>Description</b>: {itemInfo.description}
+              </TextSpan>
+              <TextSpan>
+                <b>Category</b>: {itemInfo.category}
+              </TextSpan>
+              <TextSpan>
+                <b>Effects:</b>
+              </TextSpan>
+              {itemInfo.effect_entries.map((ef) => (
+                <TextSpan>{ef.effect}</TextSpan>
+              ))}
+            </>
+          )}
+        </Col>
+      </Row>
     </PanelContainer>
   );
 };
