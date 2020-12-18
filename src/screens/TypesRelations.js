@@ -2,9 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Table, Column, HeaderCell, Cell } from 'rsuite-table';
 import 'rsuite-table/dist/css/rsuite-table.css';
-import styled from 'styled-components';
-
-import ScreenContainer from './ScreenContainer';
 import { ThemeModeContext } from '../context/ThemeContext';
 
 import TypeButton from '../components/TypeButton';
@@ -17,7 +14,7 @@ import { DAMAGE_TYPES } from '../data/types';
 const TypesRelations = () => {
   const { darkMode } = useContext(ThemeModeContext);
   const [showSelectType, setShowSelectType] = useState(false);
-  const [omitType, setOmitType] = useState('');
+  const [omitType] = useState('');
   const [firstType, setFirstType] = useState('');
   const [secondType, setSecondType] = useState('');
   const [typeToUpdate, setTypeToUpdate] = useState(1);

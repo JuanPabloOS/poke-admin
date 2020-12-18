@@ -1,13 +1,13 @@
 import React from 'react';
 
-import SearchPanel from '../SearchPokemonPanel';
+import SearchPokemonPanel from '../SearchPokemonPanel';
 
 import AdminPanel from '../AdminPanel';
 import ScreenContainer from './ScreenContainer';
 const Pokedex = () => {
   return (
     <ScreenContainer>
-      <SearchPanel />
+      <SearchPokemonPanel />
       <AdminPanel />
     </ScreenContainer>
   );
