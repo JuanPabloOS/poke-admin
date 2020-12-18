@@ -3,7 +3,6 @@ import PokemonCard from './components/PokemonCard';
 import styled from 'styled-components';
 import { PokemonContext } from './context/PokemonProvider';
 import SideContainer from './components/SideContainer';
-import { types } from './data/types';
 
 const TopSide = styled.div`
   height: 150px;
@@ -20,7 +19,7 @@ const MiddleSide = styled.div`
   background-color: ${(props) => props.theme.primaryBg};
 `;
 
-const SearchPanel = () => {
+const SearchPokemonPanel = () => {
   const { pokemons } = useContext(PokemonContext);
   const [searchText, setSearchText] = useState('');
 
@@ -90,4 +89,4 @@ const SearchPanel = () => {
   );
 };
 
-export default SearchPanel;
+export default SearchPokemonPanel;
