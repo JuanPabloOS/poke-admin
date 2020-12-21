@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import { gray, typeScale, pokemonColors } from '../styles';
 
@@ -9,6 +8,9 @@ const DamageContainer = styled.div`
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.borderColor};
   color: ${(props) => props.theme.neutroTextColor};
+  padding: 0.5rem;
+  transition: all 0.2s ease-out;
+  margin-bottom: 0.5rem;
 `;
 
 const JustType = styled.div`
@@ -29,15 +31,16 @@ const JustType = styled.div`
 const P = styled.p`
   font-size: ${typeScale['paragraph']};
 `;
+
 const DamageComparison = ({ label, types }) => {
   return (
     <DamageContainer>
       <P>{label}</P>
-      <Container className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap">
         {types.map((t) => (
           <JustType type={t}>{t}</JustType>
         ))}
-      </Container>
+      </div>
     </DamageContainer>
   );
 };

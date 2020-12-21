@@ -4,7 +4,7 @@ import { ITEMS } from '../data/items';
 export const ItemsContext = createContext(createContext);
 
 const ItemsProvider = ({ children }) => {
-  const [items, setItems] = useState(ITEMS);
+  const [items] = useState(ITEMS);
   const [activeItemId, setActiveItemId] = useState(1);
   const [activeItem, setActiveItem] = useState(null);
 
