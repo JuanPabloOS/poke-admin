@@ -2,13 +2,12 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Table, Column, HeaderCell, Cell } from 'rsuite-table';
 import 'rsuite-table/dist/css/rsuite-table.css';
-import { ThemeModeContext } from '../context/ThemeContext';
 
+import { ThemeModeContext } from '../context/ThemeContext';
 import TypeButton from '../components/TypeButton';
 import DamageComparison from '../components/DamageComparison';
-
 import SelectType from '../modals/SelectType';
-
+import TextSpan from '../components/TextSpan';
 import { DAMAGE_TYPES } from '../data/types';
 
 const TypesRelations = () => {
@@ -78,6 +77,13 @@ const TypesRelations = () => {
     }
   }, [firstType, secondType]);
 
+  const typesToText = (data) => {
+    let text = '';
+    for (const i in data) {
+      text += data[i] + '/ ';
+    }
+    return <TextSpan>{text}</TextSpan>;
+  };
   return (
     <div
       className={`${darkMode ? 'bg-dark' : 'bg-gray'}`}
@@ -126,25 +132,58 @@ const TypesRelations = () => {
       </Container>
       <Container>
         <Table data={DAMAGE_TYPES} autoHeight>
-          <Column width={200} sortable fixed resizable>
+          <Column
+            className={`${darkMode ? 'bg-dark' : 'bg-gray'}`}
+            width={200}
+            sortable
+            fixed
+            resizable
+          >
             <HeaderCell>Type</HeaderCell>
-            <Cell dataKey="type" />
+            <Cell>
+              {(rowData, rowIndex) => <TextSpan>{rowData.type}</TextSpan>}
+            </Cell>
           </Column>
-          <Column width={200} sortable resizable>
+          <Column
+            className={`${darkMode ? 'bg-dark' : 'bg-gray'}`}
+            width={200}
+            resizable
+          >
             <HeaderCell>Double Damage from</HeaderCell>
-            <Cell dataKey="doubleDamageFrom" />
+            <Cell>
+              {(rowData, rowIndex) => typesToText(rowData.doubleDamageFrom)}
+            </Cell>
           </Column>
-          <Column width={200} sortable resizable>
+          <Column
+            className={`${darkMode ? 'bg-dark' : 'bg-gray'}`}
+            width={200}
+            resizable
+          >
             <HeaderCell>Double Damage To</HeaderCell>
-            <Cell dataKey="doubleDamageTo" />
+
+            <Cell>
+              {(rowData, rowIndex) => typesToText(rowData.doubleDamageTo)}
+            </Cell>
           </Column>
-          <Column width={200} sortable resizable>
+          <Column
+            className={`${darkMode ? 'bg-dark' : 'bg-gray'}`}
+            width={200}
+            resizable
+          >
             <HeaderCell>Half Damage from</HeaderCell>
-            <Cell dataKey="halfDamageFrom" />
+            <Cell>
+              {(rowData, rowIndex) => typesToText(rowData.halfDamageFrom)}
+            </Cell>
           </Column>
-          <Column width={200} sortable resizable>
+          <Column
+            className={`${darkMode ? 'bg-dark' : 'bg-gray'}`}
+            width={200}
+            resizable
+          >
             <HeaderCell>Half Damage to</HeaderCell>
-            <Cell dataKey="halfDamageTo" />
+            <Cell>
+              {(rowData, rowIndex) => typesToText(rowData.halfDamageTo)}
+            </Cell>
           </Column>
         </Table>
       </Container>
