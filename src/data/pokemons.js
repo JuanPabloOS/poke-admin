@@ -2,10 +2,6 @@ export const POKEMONS_DATA = [
   {
     id: 1,
     name: 'bulbasaur',
-    species: {
-      name: 'bulbasaur',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/1/',
-    },
     types: [
       {
         slot: 1,
@@ -60,10 +56,6 @@ export const POKEMONS_DATA = [
   {
     id: 2,
     name: 'ivysaur',
-    species: {
-      name: 'ivysaur',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/2/',
-    },
     types: [
       {
         slot: 1,
@@ -118,10 +110,6 @@ export const POKEMONS_DATA = [
   {
     id: 3,
     name: 'venusaur',
-    species: {
-      name: 'venusaur',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/3/',
-    },
     types: [
       {
         slot: 1,
@@ -176,10 +164,6 @@ export const POKEMONS_DATA = [
   {
     id: 4,
     name: 'charmander',
-    species: {
-      name: 'charmander',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/4/',
-    },
     types: [
       {
         slot: 1,
@@ -230,10 +214,6 @@ export const POKEMONS_DATA = [
   {
     id: 5,
     name: 'charmeleon',
-    species: {
-      name: 'charmeleon',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/5/',
-    },
     types: [
       {
         slot: 1,
@@ -284,10 +264,6 @@ export const POKEMONS_DATA = [
   {
     id: 6,
     name: 'charizard',
-    species: {
-      name: 'charizard',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/6/',
-    },
     types: [
       {
         slot: 1,
@@ -342,10 +318,6 @@ export const POKEMONS_DATA = [
   {
     id: 7,
     name: 'squirtle',
-    species: {
-      name: 'squirtle',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/7/',
-    },
     types: [
       {
         slot: 1,
@@ -396,10 +368,6 @@ export const POKEMONS_DATA = [
   {
     id: 8,
     name: 'wartortle',
-    species: {
-      name: 'wartortle',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/8/',
-    },
     types: [
       {
         slot: 1,
@@ -450,10 +418,6 @@ export const POKEMONS_DATA = [
   {
     id: 9,
     name: 'blastoise',
-    species: {
-      name: 'blastoise',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/9/',
-    },
     types: [
       {
         slot: 1,
@@ -504,10 +468,6 @@ export const POKEMONS_DATA = [
   {
     id: 10,
     name: 'caterpie',
-    species: {
-      name: 'caterpie',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/10/',
-    },
     types: [
       {
         slot: 1,
@@ -558,10 +518,6 @@ export const POKEMONS_DATA = [
   {
     id: 11,
     name: 'metapod',
-    species: {
-      name: 'metapod',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/11/',
-    },
     types: [
       {
         slot: 1,
@@ -612,10 +568,6 @@ export const POKEMONS_DATA = [
   {
     id: 12,
     name: 'butterfree',
-    species: {
-      name: 'butterfree',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/12/',
-    },
     types: [
       {
         slot: 1,
@@ -670,10 +622,6 @@ export const POKEMONS_DATA = [
   {
     id: 13,
     name: 'weedle',
-    species: {
-      name: 'weedle',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/13/',
-    },
     types: [
       {
         slot: 1,
@@ -728,10 +676,6 @@ export const POKEMONS_DATA = [
   {
     id: 14,
     name: 'kakuna',
-    species: {
-      name: 'kakuna',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/14/',
-    },
     types: [
       {
         slot: 1,
@@ -786,10 +730,6 @@ export const POKEMONS_DATA = [
   {
     id: 15,
     name: 'beedrill',
-    species: {
-      name: 'beedrill',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/15/',
-    },
     types: [
       {
         slot: 1,
@@ -844,10 +784,6 @@ export const POKEMONS_DATA = [
   {
     id: 16,
     name: 'pidgey',
-    species: {
-      name: 'pidgey',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/16/',
-    },
     types: [
       {
         slot: 1,
@@ -902,10 +838,6 @@ export const POKEMONS_DATA = [
   {
     id: 17,
     name: 'pidgeotto',
-    species: {
-      name: 'pidgeotto',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/17/',
-    },
     types: [
       {
         slot: 1,
@@ -960,10 +892,6 @@ export const POKEMONS_DATA = [
   {
     id: 18,
     name: 'pidgeot',
-    species: {
-      name: 'pidgeot',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/18/',
-    },
     types: [
       {
         slot: 1,
@@ -1018,10 +946,6 @@ export const POKEMONS_DATA = [
   {
     id: 19,
     name: 'rattata',
-    species: {
-      name: 'rattata',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/19/',
-    },
     types: [
       {
         slot: 1,
@@ -1072,10 +996,6 @@ export const POKEMONS_DATA = [
   {
     id: 20,
     name: 'raticate',
-    species: {
-      name: 'raticate',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/20/',
-    },
     types: [
       {
         slot: 1,
@@ -1126,10 +1046,6 @@ export const POKEMONS_DATA = [
   {
     id: 21,
     name: 'spearow',
-    species: {
-      name: 'spearow',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/21/',
-    },
     types: [
       {
         slot: 1,
@@ -1184,10 +1100,6 @@ export const POKEMONS_DATA = [
   {
     id: 22,
     name: 'fearow',
-    species: {
-      name: 'fearow',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/22/',
-    },
     types: [
       {
         slot: 1,
@@ -1242,10 +1154,6 @@ export const POKEMONS_DATA = [
   {
     id: 23,
     name: 'ekans',
-    species: {
-      name: 'ekans',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/23/',
-    },
     types: [
       {
         slot: 1,
@@ -1296,10 +1204,6 @@ export const POKEMONS_DATA = [
   {
     id: 24,
     name: 'arbok',
-    species: {
-      name: 'arbok',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/24/',
-    },
     types: [
       {
         slot: 1,
@@ -1350,10 +1254,6 @@ export const POKEMONS_DATA = [
   {
     id: 25,
     name: 'pikachu',
-    species: {
-      name: 'pikachu',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/25/',
-    },
     types: [
       {
         slot: 1,
@@ -1404,10 +1304,6 @@ export const POKEMONS_DATA = [
   {
     id: 26,
     name: 'raichu',
-    species: {
-      name: 'raichu',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/26/',
-    },
     types: [
       {
         slot: 1,
@@ -1458,10 +1354,6 @@ export const POKEMONS_DATA = [
   {
     id: 27,
     name: 'sandshrew',
-    species: {
-      name: 'sandshrew',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/27/',
-    },
     types: [
       {
         slot: 1,
@@ -1512,10 +1404,6 @@ export const POKEMONS_DATA = [
   {
     id: 28,
     name: 'sandslash',
-    species: {
-      name: 'sandslash',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/28/',
-    },
     types: [
       {
         slot: 1,
@@ -1566,10 +1454,6 @@ export const POKEMONS_DATA = [
   {
     id: 29,
     name: 'nidoran-f',
-    species: {
-      name: 'nidoran-f',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/29/',
-    },
     types: [
       {
         slot: 1,
@@ -1620,10 +1504,6 @@ export const POKEMONS_DATA = [
   {
     id: 30,
     name: 'nidorina',
-    species: {
-      name: 'nidorina',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/30/',
-    },
     types: [
       {
         slot: 1,
@@ -1674,10 +1554,6 @@ export const POKEMONS_DATA = [
   {
     id: 31,
     name: 'nidoqueen',
-    species: {
-      name: 'nidoqueen',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/31/',
-    },
     types: [
       {
         slot: 1,
@@ -1732,10 +1608,6 @@ export const POKEMONS_DATA = [
   {
     id: 32,
     name: 'nidoran-m',
-    species: {
-      name: 'nidoran-m',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/32/',
-    },
     types: [
       {
         slot: 1,
@@ -1786,10 +1658,6 @@ export const POKEMONS_DATA = [
   {
     id: 33,
     name: 'nidorino',
-    species: {
-      name: 'nidorino',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/33/',
-    },
     types: [
       {
         slot: 1,
@@ -1840,10 +1708,6 @@ export const POKEMONS_DATA = [
   {
     id: 34,
     name: 'nidoking',
-    species: {
-      name: 'nidoking',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/34/',
-    },
     types: [
       {
         slot: 1,
@@ -1898,10 +1762,6 @@ export const POKEMONS_DATA = [
   {
     id: 35,
     name: 'clefairy',
-    species: {
-      name: 'clefairy',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/35/',
-    },
     types: [
       {
         slot: 1,
@@ -1952,10 +1812,6 @@ export const POKEMONS_DATA = [
   {
     id: 36,
     name: 'clefable',
-    species: {
-      name: 'clefable',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/36/',
-    },
     types: [
       {
         slot: 1,
@@ -2006,10 +1862,6 @@ export const POKEMONS_DATA = [
   {
     id: 37,
     name: 'vulpix',
-    species: {
-      name: 'vulpix',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/37/',
-    },
     types: [
       {
         slot: 1,
@@ -2060,10 +1912,6 @@ export const POKEMONS_DATA = [
   {
     id: 38,
     name: 'ninetales',
-    species: {
-      name: 'ninetales',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/38/',
-    },
     types: [
       {
         slot: 1,
@@ -2114,10 +1962,6 @@ export const POKEMONS_DATA = [
   {
     id: 39,
     name: 'jigglypuff',
-    species: {
-      name: 'jigglypuff',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/39/',
-    },
     types: [
       {
         slot: 1,
@@ -2172,10 +2016,6 @@ export const POKEMONS_DATA = [
   {
     id: 40,
     name: 'wigglytuff',
-    species: {
-      name: 'wigglytuff',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/40/',
-    },
     types: [
       {
         slot: 1,
@@ -2230,10 +2070,6 @@ export const POKEMONS_DATA = [
   {
     id: 41,
     name: 'zubat',
-    species: {
-      name: 'zubat',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/41/',
-    },
     types: [
       {
         slot: 1,
@@ -2288,10 +2124,6 @@ export const POKEMONS_DATA = [
   {
     id: 42,
     name: 'golbat',
-    species: {
-      name: 'golbat',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/42/',
-    },
     types: [
       {
         slot: 1,
@@ -2346,10 +2178,6 @@ export const POKEMONS_DATA = [
   {
     id: 43,
     name: 'oddish',
-    species: {
-      name: 'oddish',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/43/',
-    },
     types: [
       {
         slot: 1,
@@ -2404,10 +2232,6 @@ export const POKEMONS_DATA = [
   {
     id: 44,
     name: 'gloom',
-    species: {
-      name: 'gloom',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/44/',
-    },
     types: [
       {
         slot: 1,
@@ -2462,10 +2286,6 @@ export const POKEMONS_DATA = [
   {
     id: 45,
     name: 'vileplume',
-    species: {
-      name: 'vileplume',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/45/',
-    },
     types: [
       {
         slot: 1,
@@ -2520,10 +2340,6 @@ export const POKEMONS_DATA = [
   {
     id: 46,
     name: 'paras',
-    species: {
-      name: 'paras',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/46/',
-    },
     types: [
       {
         slot: 1,
@@ -2578,10 +2394,6 @@ export const POKEMONS_DATA = [
   {
     id: 47,
     name: 'parasect',
-    species: {
-      name: 'parasect',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/47/',
-    },
     types: [
       {
         slot: 1,
@@ -2636,10 +2448,6 @@ export const POKEMONS_DATA = [
   {
     id: 48,
     name: 'venonat',
-    species: {
-      name: 'venonat',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/48/',
-    },
     types: [
       {
         slot: 1,
@@ -2694,10 +2502,6 @@ export const POKEMONS_DATA = [
   {
     id: 49,
     name: 'venomoth',
-    species: {
-      name: 'venomoth',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/49/',
-    },
     types: [
       {
         slot: 1,
@@ -2752,10 +2556,6 @@ export const POKEMONS_DATA = [
   {
     id: 50,
     name: 'diglett',
-    species: {
-      name: 'diglett',
-      url: 'https://pokeapi.co/api/v2/pokemon-species/50/',
-    },
     types: [
       {
         slot: 1,

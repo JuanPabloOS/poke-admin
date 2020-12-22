@@ -4,12 +4,15 @@ import SearchPokemonPanel from '../SearchPokemonPanel';
 
 import AdminPanel from '../AdminPanel';
 import ScreenContainer from './ScreenContainer';
+import PokemonProvider from '../context/PokemonProvider';
 const Pokedex = () => {
   return (
-    <ScreenContainer>
-      <SearchPokemonPanel />
-      <AdminPanel />
-    </ScreenContainer>
+    <PokemonProvider>
+      <ScreenContainer>
+        <SearchPokemonPanel />
+        <AdminPanel />
+      </ScreenContainer>
+    </PokemonProvider>
   );
 };
 

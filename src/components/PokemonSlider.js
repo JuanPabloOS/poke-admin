@@ -34,7 +34,11 @@ const PokemonSlider = () => {
   );
   return (
     <SliderBlock>
-      <ControlPad className="bg-primary" onClick={prevPokemon}>
+      <ControlPad
+        className="bg-primary"
+        onClick={prevPokemon}
+        data-testid="prev-button"
+      >
         <i className="fas fa-chevron-left color-light"></i>
       </ControlPad>
 
@@ -44,10 +48,15 @@ const PokemonSlider = () => {
           width={250}
           height={250}
           alt={'d'}
+          data-testid="pokemon-image"
         />
       </ImageContainer>
 
-      <ControlPad className="bg-primary" onClick={nextPokemon}>
+      <ControlPad
+        className="bg-primary"
+        onClick={nextPokemon}
+        data-testid="next-button"
+      >
         <i className="fas fa-chevron-right color-light"></i>
       </ControlPad>
     </SliderBlock>

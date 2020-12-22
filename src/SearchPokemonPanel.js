@@ -79,6 +79,7 @@ const SearchPokemonPanel = () => {
             type="text"
             placeholder="Search"
             className="customSearchInput"
+            data-testid="search-input"
             value={searchText}
             onChange={({ target }) => setSearchText(target.value)}
           />
