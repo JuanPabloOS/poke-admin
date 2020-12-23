@@ -211,3 +211,57 @@ export const mock_pokemon_data = [
     weight: 85,
   },
 ];
+
+export const bulbasaur = {
+  id: 1,
+  name: 'bulbasaur',
+  types: [
+    {
+      slot: 1,
+      name: 'grass',
+    },
+    {
+      slot: 2,
+      name: 'poison',
+    },
+  ],
+  stats: [
+    {
+      name: 'hp',
+      base_stat: 45,
+      effort: 0,
+    },
+
+    {
+      name: 'attack',
+      base_stat: 49,
+      effort: 0,
+    },
+
+    {
+      name: 'defense',
+      base_stat: 49,
+      effort: 0,
+    },
+
+    {
+      name: 'special-attack',
+      base_stat: 65,
+      effort: 1,
+    },
+
+    {
+      name: 'special-defense',
+      base_stat: 65,
+      effort: 0,
+    },
+
+    {
+      name: 'speed',
+      base_stat: 45,
+      effort: 0,
+    },
+  ],
+  height: 7,
+  weight: 69,
+};
