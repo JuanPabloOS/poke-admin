@@ -272,3 +272,31 @@ export const mock_moves = [
   { id: 3, name: 'double-slap' },
 ];
 export const pound = { id: 1, name: 'pound' };
+
+export const mock_items = [
+  {
+    id: 1,
+    name: 'master-ball',
+    imgUrl:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png',
+  },
+  {
+    id: 2,
+    name: 'ultra-ball',
+    imgUrl:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png',
+  },
+  {
+    id: 3,
+    name: 'great-ball',
+    imgUrl:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png',
+  },
+];
+
+export const master_ball = {
+  id: 1,
+  name: 'master-ball',
+  imgUrl:
+    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png',
+};

@@ -31,15 +31,19 @@ const ItemInfo = () => {
       )}
       <Row>
         <Col className="d-flex flex-column px-4">
+          <TextSpan>
+            <b>Name: </b>
+            {activeItem.name}
+          </TextSpan>
           {itemInfo === null ? (
             <TextSpan>Loading...</TextSpan>
           ) : (
             <>
               <TextSpan>
-                <b>Description</b>: {itemInfo.description}
+                <b>Description:</b> {itemInfo.description}
               </TextSpan>
               <TextSpan>
-                <b>Category</b>: {itemInfo.category}
+                <b>Category:</b> {itemInfo.category}
               </TextSpan>
               <TextSpan>
                 <b>Effects:</b>
