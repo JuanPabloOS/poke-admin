@@ -265,3 +265,10 @@ export const bulbasaur = {
   height: 7,
   weight: 69,
 };
+
+export const mock_moves = [
+  { id: 1, name: 'pound' },
+  { id: 2, name: 'karate-chop' },
+  { id: 3, name: 'double-slap' },
+];
+export const pound = { id: 1, name: 'pound' };
