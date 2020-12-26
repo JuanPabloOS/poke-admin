@@ -29,7 +29,7 @@ const MoveInfo = () => {
       )
       .catch(console.error);
   }, [activeMoveId]);
-  console.log(moveInfo);
+
   return (
     <PanelContainer>
       <Row>

@@ -55,7 +55,6 @@ const EditPokemon = ({ show, handleClose }) => {
           initialValues={initialValues}
           validationSchema={PokemonSchema}
           onSubmit={(values, actions) => {
-            console.log(values);
             editActivePokemon(values);
             handleClose();
             actions.setSubmitting(false);

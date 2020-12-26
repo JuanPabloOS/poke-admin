@@ -53,5 +53,6 @@ describe('<PokemonInfo/>', () => {
     await waitFor(() => {
       expect(screen.getByText('Edit Pokémon')).toBeInTheDocument();
     });
+    expect(screen.getByRole('form')).toBeInTheDocument();
   });
 });

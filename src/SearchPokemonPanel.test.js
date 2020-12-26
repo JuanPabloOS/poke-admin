@@ -1,14 +1,13 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, WithPokemons } from '../test-utils';
 import SearchPokemonPanel from './SearchPokemonPanel';
-import { PokemonContext } from './context/PokemonProvider';
-import { mock_pokemon_data } from './mockdata';
+
 describe('<SearchPokemonPanel/>', () => {
   test('Renders without crashing', () => {
     render(
-      <PokemonContext.Provider value={{ pokemons: mock_pokemon_data }}>
+      <WithPokemons>
         <SearchPokemonPanel />
-      </PokemonContext.Provider>
+      </WithPokemons>
     );
     expect(
       screen.getByText('Welcome to the Pokémon administrative panel')
@@ -17,9 +16,9 @@ describe('<SearchPokemonPanel/>', () => {
   });
   test('Filter by pokemon name', () => {
     render(
-      <PokemonContext.Provider value={{ pokemons: mock_pokemon_data }}>
+      <WithPokemons>
         <SearchPokemonPanel />
-      </PokemonContext.Provider>
+      </WithPokemons>
     );
     fireEvent.change(
       screen.getByTestId('search-input', {
@@ -28,13 +27,13 @@ describe('<SearchPokemonPanel/>', () => {
         },
       })
     );
-    expect(screen.getByText('#003')).toBeInTheDocument();
+    expect(screen.getByText('charmander')).toBeInTheDocument();
   });
   test('Filter by pokemon type', () => {
     render(
-      <PokemonContext.Provider value={{ pokemons: mock_pokemon_data }}>
+      <WithPokemons>
         <SearchPokemonPanel />
-      </PokemonContext.Provider>
+      </WithPokemons>
     );
     fireEvent.change(
       screen.getByTestId('search-input', {
