@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Formik, Form as FormikForm } from 'formik';
+import { Formik } from 'formik';
 import { Button, Modal } from 'react-bootstrap';
 import { PokemonContext } from '../context/PokemonProvider';
 import { types } from '../data/types';
@@ -61,7 +61,7 @@ const EditPokemon = ({ show, handleClose }) => {
           }}
         >
           {({ handleSubmit }) => (
-            <FormikForm>
+            <form onSubmit={handleSubmit} aria-label="form">
               <Modal.Body>
                 <CustomFormControl
                   label="Name:"
@@ -119,11 +119,11 @@ const EditPokemon = ({ show, handleClose }) => {
                 <Button variant="secondary" onClick={handleClose}>
                   Close
                 </Button>
-                <Button variant="primary" onClick={handleSubmit}>
+                <Button variant="primary" type="submit">
                   Save Changes
                 </Button>
               </Modal.Footer>
-            </FormikForm>
+            </form>
           )}
         </Formik>
       ) : null}
