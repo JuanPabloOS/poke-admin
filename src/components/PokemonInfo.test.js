@@ -1,15 +1,19 @@
 import React from 'react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  WithDefaultTheme,
+} from '../../test-utils';
 import PokemonInfo from './PokemonInfo';
 import { PokemonContext } from '../context/PokemonProvider';
-import { ThemeProvider } from 'styled-components';
-import { defaultTheme } from '../styles';
 import { bulbasaur } from '../mockdata';
 
 describe('<PokemonInfo/>', () => {
   test('should render without crashing', () => {
     render(
-      <ThemeProvider theme={defaultTheme}>
+      <WithDefaultTheme>
         <PokemonContext.Provider
           value={{
             activePokemon: bulbasaur,
@@ -17,7 +21,7 @@ describe('<PokemonInfo/>', () => {
         >
           <PokemonInfo />
         </PokemonContext.Provider>
-      </ThemeProvider>
+      </WithDefaultTheme>
     );
     expect(screen.getByText('#001 Bulbasaur')).toBeInTheDocument();
     expect(screen.getByText('grass')).toBeInTheDocument();
@@ -25,7 +29,7 @@ describe('<PokemonInfo/>', () => {
   });
   test('should render the edit button', () => {
     render(
-      <ThemeProvider theme={defaultTheme}>
+      <WithDefaultTheme>
         <PokemonContext.Provider
           value={{
             activePokemon: bulbasaur,
@@ -33,13 +37,13 @@ describe('<PokemonInfo/>', () => {
         >
           <PokemonInfo />
         </PokemonContext.Provider>
-      </ThemeProvider>
+      </WithDefaultTheme>
     );
     expect(screen.getByTestId('button-edit-pokemon')).toBeInTheDocument();
   });
-  test('should render the modal to edit', async () => {
+  test('should render the modal to edit with a form', async () => {
     render(
-      <ThemeProvider theme={defaultTheme}>
+      <WithDefaultTheme>
         <PokemonContext.Provider
           value={{
             activePokemon: bulbasaur,
@@ -47,8 +51,9 @@ describe('<PokemonInfo/>', () => {
         >
           <PokemonInfo />
         </PokemonContext.Provider>
-      </ThemeProvider>
+      </WithDefaultTheme>
     );
+    expect(screen.queryByAltText('Edit Pokémon')).not.toBeInTheDocument();
     fireEvent.click(screen.getByTestId('button-edit-pokemon'));
     await waitFor(() => {
       expect(screen.getByText('Edit Pokémon')).toBeInTheDocument();
