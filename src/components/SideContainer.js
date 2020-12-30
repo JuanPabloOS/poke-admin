@@ -6,9 +6,7 @@ const Panel = styled.div`
   color: ${(props) => props.theme.neutroTextColor};
 `;
 const SideContainer = ({ children }) => {
-  return (
-    <Panel className="side-panel d-sm-none d-md-block h-100">{children}</Panel>
-  );
+  return <Panel className="side-panel d-md-block h-100">{children}</Panel>;
 };
 
 export default SideContainer;

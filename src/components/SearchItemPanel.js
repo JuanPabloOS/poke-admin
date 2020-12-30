@@ -15,7 +15,7 @@ const SearchItemPanel = () => {
       <ItemsContainer>
         {items.map((item, index) => (
           <ItemCard
-            key={`item-${item}-${index}`}
+            key={`item-${item.name}-${index}`}
             id={item.id}
             name={item.name}
             imgUrl={item.imgUrl}

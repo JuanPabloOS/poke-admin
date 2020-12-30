@@ -9,6 +9,7 @@ const Padding = styled.div`
   width: calc(100% - 340px);
   display: flex;
   flex-direction: column;
+  min-width: 500px;
   @media (max-width: 768px) {
     width: 100%;
   }

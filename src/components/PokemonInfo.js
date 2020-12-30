@@ -71,12 +71,17 @@ const PokemonInfo = () => {
                 {activePokemon !== null ? (
                   <ActionIcon
                     data-testid="button-edit-pokemon"
+                    data-cy="button-edit-pokemon"
                     onClick={() => setShowEdit(true)}
                   >
                     <i className="fas fa-edit"></i>
                   </ActionIcon>
                 ) : null}
-                <ActionIcon onClick={() => setShowAdd(true)}>
+                <ActionIcon
+                  data-testid="button-add-pokemon"
+                  data-cy="button-add-pokemon"
+                  onClick={() => setShowAdd(true)}
+                >
                   <i className="fas fa-plus"></i>
                 </ActionIcon>
               </ActionsContainer>

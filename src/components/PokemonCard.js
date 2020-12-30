@@ -7,7 +7,7 @@ const Card = styled.div`
   display: flex;
   border-bottom: 1px solid ${(props) => props.theme.borderColor};
   justify-content: space-between;
-  transition: all 0.2s ease-out;
+
   background-color: ${(props) =>
     props.active ? props.theme.cardHoverColor : 'none'};
 
@@ -37,6 +37,10 @@ const PokemonCard = ({ id, name, types = [] }) => {
   } else {
     formatId = `#${id}`;
   }
+  let formatedTypes = types[0].name;
+  if (types.length === 2) {
+    formatedTypes = types[0].name + '/' + types[1].name;
+  }
   return (
     <Card
       active={id === activePokemonId}
@@ -45,7 +49,7 @@ const PokemonCard = ({ id, name, types = [] }) => {
       <div>
         <StyledSpan>{formatId}</StyledSpan>
         <StyledSpan>{name}</StyledSpan>
-        <StyledSpan>{types.map((t) => t.name)}</StyledSpan>
+        <StyledSpan>{formatedTypes}</StyledSpan>
       </div>
       <ImgContainer>
         <img

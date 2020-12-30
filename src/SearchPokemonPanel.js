@@ -3,7 +3,7 @@ import PokemonCard from './components/PokemonCard';
 import styled from 'styled-components';
 import { PokemonContext } from './context/PokemonProvider';
 import SideContainer from './components/SideContainer';
-
+import StyledSearchInput from './components/SearchInput';
 const TopSide = styled.div`
   height: 150px;
   box-sizing: border-box;
@@ -45,6 +45,18 @@ const SearchPokemonPanel = () => {
             key={`pokemon-element-#00-${p.id}`}
           />
         ));
+    } else if (searchText.startsWith('#')) {
+      let idRequired = parseInt(searchText.split('#')[1], 10);
+      return pokemons
+        .filter((pokemon) => pokemon.id === idRequired)
+        .map((p) => (
+          <PokemonCard
+            id={p.id}
+            name={p.name}
+            types={p.types}
+            key={`pokemon-element-#00-${p.id}`}
+          />
+        ));
     }
     if (searchText !== '') {
       return pokemons
@@ -75,7 +87,7 @@ const SearchPokemonPanel = () => {
           <p className="text-primary st-8">
             Welcome to the Pokémon administrative panel
           </p>
-          <input
+          <StyledSearchInput
             type="text"
             placeholder="Search"
             className="customSearchInput"

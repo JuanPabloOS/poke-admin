@@ -33,12 +33,16 @@ const P = styled.p`
 `;
 
 const DamageComparison = ({ label, types }) => {
+  let setTypes = new Set(types);
+
   return (
     <DamageContainer>
       <P>{label}</P>
       <div className="d-flex flex-wrap">
-        {types.map((t) => (
-          <JustType type={t}>{t}</JustType>
+        {[...setTypes].map((t) => (
+          <JustType key={`type-dmg-${t}`} type={t}>
+            {t}
+          </JustType>
         ))}
       </div>
     </DamageContainer>

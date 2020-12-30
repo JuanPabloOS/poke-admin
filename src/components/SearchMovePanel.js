@@ -15,7 +15,7 @@ const SearchMovePanel = () => {
       <ItemsContainer>
         {moves.map((move, index) => (
           <MoveCard
-            key={`move-${move}-${index}`}
+            key={`move-${move.name}-${index}`}
             id={move.id}
             name={move.name}
           />

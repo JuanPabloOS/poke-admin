@@ -41,7 +41,7 @@ describe('<PokemonInfo/>', () => {
     );
     expect(screen.getByTestId('button-edit-pokemon')).toBeInTheDocument();
   });
-  test('should render the modal to edit with a form', async () => {
+  test('should render the modal to edit with a populated form', async () => {
     render(
       <WithDefaultTheme>
         <PokemonContext.Provider
@@ -58,6 +58,18 @@ describe('<PokemonInfo/>', () => {
     await waitFor(() => {
       expect(screen.getByText('Edit Pokémon')).toBeInTheDocument();
     });
-    expect(screen.getByRole('form')).toBeInTheDocument();
+    expect(screen.getByRole('form')).toHaveFormValues({
+      name: 'bulbasaur',
+      height: 7,
+      weight: 69,
+      fstType: 'grass',
+      sndType: 'poison',
+      hp: 45,
+      attack: 49,
+      defense: 49,
+      spAttack: 65,
+      spDefense: 65,
+      speed: 45,
+    });
   });
 });

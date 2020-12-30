@@ -89,7 +89,7 @@ const TypesRelations = () => {
       className={`${darkMode ? 'bg-dark' : 'bg-gray'}`}
       style={{ height: '100vh', overflowY: 'scroll' }}
     >
-      <Container fluid>
+      <Container>
         <Col>
           <Row className="justify-content-center py-4">
             <TypeButton
@@ -105,29 +105,31 @@ const TypesRelations = () => {
               Second
             </TypeButton>
           </Row>
-          {firstType !== '' || secondType !== '' ? (
-            <Container
-              fluid
-              className="d-flex flex-wrap justify-content-around"
-            >
-              <DamageComparison
-                label="Double damage from"
-                types={[...ftDDF, ...stDDF]}
-              />
-              <DamageComparison
-                label="Double damage to"
-                types={[...ftDDT, ...stDDT]}
-              />
-              <DamageComparison
-                label="Half damage from"
-                types={[...ftHDF, ...stHDF]}
-              />
-              <DamageComparison
-                label="Half damage to"
-                types={[...ftHDT, ...stHDT]}
-              />
-            </Container>
-          ) : null}
+          <Container fluid>
+            {firstType !== '' || secondType !== '' ? (
+              <Container
+                fluid
+                className="d-flex flex-wrap justify-content-around"
+              >
+                <DamageComparison
+                  label="Double damage from"
+                  types={[...ftDDF, ...stDDF]}
+                />
+                <DamageComparison
+                  label="Double damage to"
+                  types={[...ftDDT, ...stDDT]}
+                />
+                <DamageComparison
+                  label="Half damage from"
+                  types={[...ftHDF, ...stHDF]}
+                />
+                <DamageComparison
+                  label="Half damage to"
+                  types={[...ftHDT, ...stHDT]}
+                />
+              </Container>
+            ) : null}
+          </Container>
         </Col>
       </Container>
       <Container>

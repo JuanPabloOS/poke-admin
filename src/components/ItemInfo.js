@@ -31,10 +31,12 @@ const ItemInfo = () => {
       )}
       <Row>
         <Col className="d-flex flex-column px-4">
-          <TextSpan>
-            <b>Name: </b>
-            {activeItem.name}
-          </TextSpan>
+          {activeItem !== null && (
+            <TextSpan>
+              <b>Name: </b>
+              {activeItem.name}
+            </TextSpan>
+          )}
           {itemInfo === null ? (
             <TextSpan>Loading...</TextSpan>
           ) : (
@@ -48,8 +50,8 @@ const ItemInfo = () => {
               <TextSpan>
                 <b>Effects:</b>
               </TextSpan>
-              {itemInfo.effect_entries.map((ef) => (
-                <TextSpan>{ef.effect}</TextSpan>
+              {itemInfo.effect_entries.map((ef, id) => (
+                <TextSpan key={`effect-entry-${id}`}>{ef.effect}</TextSpan>
               ))}
             </>
           )}
