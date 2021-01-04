@@ -56,6 +56,9 @@ const AppRouter = () => {
                   onClick={changeMode}
                 />
               </StyledNavItem>
+              <NavLink to="/">
+                <StyledNavItem>Pokédex</StyledNavItem>
+              </NavLink>
               <NavLink to="/Items">
                 <StyledNavItem>Items</StyledNavItem>
               </NavLink>
