@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const ItemsContainer = styled.div`
   height: 100%;
+  flex-grow: 1;
   overflow-y: scroll;
 `;
 const SearchItemPanel = () => {

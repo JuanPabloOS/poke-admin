@@ -9,7 +9,7 @@ const Card = styled.div`
   transition: all 0.2s ease-out;
   background-color: ${(props) =>
     props.active ? props.theme.cardHoverColor : 'none'};
-
+  width: 100%;
   &:hover {
     background-color: ${(props) => props.theme.cardHoverColor};
     cursor: pointer;

@@ -13,8 +13,7 @@ const TopSide = styled.div`
 `;
 
 const MiddleSide = styled.div`
-  max-height: calc(100% - 220px);
-  min-height: calc(100% - 220px);
+  height: calc(100% - 150px);
   overflow-y: scroll;
   background-color: ${(props) => props.theme.primaryBg};
 `;
