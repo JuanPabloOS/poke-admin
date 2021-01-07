@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { PokemonContext } from '../context/PokemonProvider';
 
@@ -32,6 +32,7 @@ const PokemonSlider = () => {
   const { prevPokemon, nextPokemon, activePokemonId } = useContext(
     PokemonContext
   );
+
   return (
     <SliderBlock>
       <ControlPad

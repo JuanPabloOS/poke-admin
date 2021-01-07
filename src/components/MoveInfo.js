@@ -44,35 +44,35 @@ const MoveInfo = () => {
           ) : (
             <>
               <TextSpan>
-                <b>accuracy:</b>
+                <b>Accuracy: </b>
                 {moveInfo.accuracy}
               </TextSpan>
               <TextSpan>
-                <b>damage_class:</b>
+                <b>Damage class: </b>
                 {moveInfo.damage_class}
               </TextSpan>
               <TextSpan>
-                <b>effect_entry:</b>
+                <b>Effect entry: </b>
                 {moveInfo.effect_entry}
               </TextSpan>
               <TextSpan>
-                <b>description:</b>
+                <b>Description: </b>
                 {moveInfo.description}
               </TextSpan>
               <TextSpan>
-                <b>power:</b>
+                <b>Power: </b>
                 {moveInfo.power}
               </TextSpan>
               <TextSpan>
-                <b>pp:</b>
+                <b>PP: </b>
                 {moveInfo.pp}
               </TextSpan>
               <TextSpan>
-                <b>target:</b>
+                <b>Target: </b>
                 {moveInfo.target}
               </TextSpan>
               <TextSpan>
-                <b>type:</b>
+                <b>Type: </b>
                 {moveInfo.type}
               </TextSpan>
             </>

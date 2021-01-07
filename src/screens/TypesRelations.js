@@ -57,6 +57,11 @@ const TypesRelations = () => {
       setFtHDT(
         DAMAGE_TYPES.find((dm) => dm.type === firstType)['halfDamageTo'] || []
       );
+    } else {
+      setFtDDF([]);
+      setFtDDT([]);
+      setFtHDF([]);
+      setFtHDT([]);
     }
     if (secondType !== '') {
       setStDDF(
@@ -74,6 +79,11 @@ const TypesRelations = () => {
       setStHDT(
         DAMAGE_TYPES.find((dm) => dm.type === secondType)['halfDamageTo'] || []
       );
+    } else {
+      setStDDF([]);
+      setStDDT([]);
+      setStHDF([]);
+      setStHDT([]);
     }
   }, [firstType, secondType]);
 

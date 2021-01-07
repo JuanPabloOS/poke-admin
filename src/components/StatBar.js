@@ -16,6 +16,7 @@ const Bar = styled.span`
   width: ${(props) => props.percentage};
   background-color: ${(props) => props.color};
   display: block;
+  transition: all 0.5s ease-in-out;
 `;
 
 const StatContainer = styled.div`
@@ -35,7 +36,7 @@ const StatBar = ({ label, stat, color = 'green' }) => {
   return (
     <StatContainer>
       <TextSpan>{label}</TextSpan>
-      <BackgroundBar>
+      <BackgroundBar className="animate__slideInLeft">
         <Bar percentage={percentage + '%'} color={color} />
       </BackgroundBar>
     </StatContainer>

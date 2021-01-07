@@ -33,6 +33,7 @@ const ActionsContainer = styled.div`
 const DetailsSpan = styled.span`
   color: ${(props) => props.theme.neutroTextColor};
   transition: all 0.2s ease-out;
+  font-size: clamp(1.5rem, 2vw, 2rem);
 `;
 
 const PokemonInfo = () => {
@@ -61,7 +62,7 @@ const PokemonInfo = () => {
           <Col sm={12}>
             <Row className="justify-content-center align-items-center py-1">
               {activePokemon != null ? (
-                <DetailsSpan className="st-5">
+                <DetailsSpan>
                   {formatId(activePokemon.id) + ' '}
                   {formatName(activePokemon.name)}
                 </DetailsSpan>
@@ -87,18 +88,17 @@ const PokemonInfo = () => {
               </ActionsContainer>
             </Row>
             <Row className="justify-content-center align-items-center py-1">
-              <div>
-                {activePokemon != null
-                  ? activePokemon.types.map((t, i) => (
-                      <TypeSpan
-                        key={`type-${t.name}-${i}`}
-                        pokemonType={t.name}
-                      >
-                        {t.name}
-                      </TypeSpan>
-                    ))
-                  : null}
-              </div>
+              {activePokemon != null
+                ? activePokemon.types.map((t, i) => (
+                    <TypeSpan
+                      className="mb-1"
+                      key={`type-${t.name}-${i}`}
+                      pokemonType={t.name}
+                    >
+                      {t.name}
+                    </TypeSpan>
+                  ))
+                : null}
             </Row>
             <Row className="justify-content-center align-items-center py-1">
               <div>
