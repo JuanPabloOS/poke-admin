@@ -21,4 +21,4 @@ jobs:
           browser: chrome
           start: npm start
           wait-on: 'http://localhost:3000'
-          config: baseUrl=https:localhost:3000
+          config: baseUrl=https//localhost:3000
